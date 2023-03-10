@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Scoreboard",
-      initialRoute: "routeTekliBatak",
+      initialRoute: "/",
       routes: {
         '/': (context) => MyHomePage(),
-        'routeBatak': (context) => Batak(),
-        "routeTekliBatak": (context) => TekliBatak(),
+        '/routeBatak': (context) => Batak(),
+        "/routeTekliBatak": (context) => TekliBatak(),
       },
     );
   }
@@ -37,7 +37,9 @@ class MyHomePage extends StatelessWidget {
         body: SingleChildScrollView(
           padding: EdgeInsets.all(5),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, '/routeBatak');
+            },
             child: Column(
               children: <Widget>[
                 GameCard("Batak"),

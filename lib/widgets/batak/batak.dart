@@ -14,9 +14,17 @@ class Batak extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(5),
-        child: Column(children: <Widget>[
-          GameCard("Eşli Batak"),
-        ]),
+        child: GestureDetector(
+          onTap: () {
+            Navigator.pushNamed(context, "/routeTekliBatak");
+          },
+          child: Column(children: <Widget>[
+            GameCard("Tekli Batak"),
+            GameCard("Eşli Batak"),
+            GameCard("Gömmeli Batak"),
+            GameCard("3,5,8 Batak"),
+          ]),
+        ),
       ),
     );
   }
