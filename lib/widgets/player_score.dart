@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors,prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 class PlayerScore extends StatelessWidget {
@@ -7,8 +5,9 @@ class PlayerScore extends StatelessWidget {
   final String score2;
   final String score3;
   final String score4;
-  PlayerScore(
-      {required this.score1,
+  const PlayerScore(
+      {super.key,
+      required this.score1,
       required this.score2,
       required this.score3,
       required this.score4});
@@ -45,7 +44,7 @@ class PlayerScore extends StatelessWidget {
             ),
           ],
         ),
-        Divider(
+        const Divider(
           thickness: 2,
           endIndent: 5,
           indent: 5,

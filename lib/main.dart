@@ -1,11 +1,9 @@
-// ignore_for_file: prefer_const_constructors,prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:scoreboard_app/widgets/batak/batak.dart';
 import 'package:scoreboard_app/widgets/batak/tekli_batak.dart';
 import './widgets/game_card.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -16,9 +14,9 @@ class MyApp extends StatelessWidget {
       title: "Scoreboard",
       initialRoute: "/",
       routes: {
-        '/': (context) => MyHomePage(),
-        '/routeBatak': (context) => Batak(),
-        "/routeTekliBatak": (context) => TekliBatak(),
+        '/': (context) => const MyHomePage(),
+        '/routeBatak': (context) => const Batak(),
+        "/routeTekliBatak": (context) => const TekliBatak(),
       },
     );
   }
@@ -35,13 +33,13 @@ class MyHomePage extends StatelessWidget {
           title: const Text("Scoreboard"),
         ),
         body: SingleChildScrollView(
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           child: GestureDetector(
             onTap: () {
               Navigator.pushNamed(context, '/routeBatak');
             },
             child: Column(
-              children: <Widget>[
+              children: const <Widget>[
                 GameCard("Batak"),
                 GameCard("Batak"),
                 GameCard("Batak"),

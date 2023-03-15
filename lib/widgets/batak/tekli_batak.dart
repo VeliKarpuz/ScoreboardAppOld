@@ -1,11 +1,11 @@
-// ignore_for_file: prefer_const_constructors,prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:scoreboard_app/widgets/player_name.dart';
 import '../player_score.dart';
 import '../yeni_el_ekleme.dart';
 
 class TekliBatak extends StatefulWidget {
+  const TekliBatak({super.key});
+
   @override
   State<TekliBatak> createState() => _TekliBatakState();
 }
@@ -41,7 +41,7 @@ class _TekliBatakState extends State<TekliBatak> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Tekli Batak"),
+        title: const Text("Tekli Batak"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -71,7 +71,7 @@ class _TekliBatakState extends State<TekliBatak> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.add), label: "Ekle"),
           BottomNavigationBarItem(icon: Icon(Icons.refresh), label: "Yeni Oyun")
         ],

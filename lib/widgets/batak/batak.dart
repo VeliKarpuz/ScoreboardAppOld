@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors,prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import '../game_card.dart';
 
@@ -10,15 +8,15 @@ class Batak extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Batak"),
+        title: const Text("Batak"),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(5),
+        padding: const EdgeInsets.all(5),
         child: GestureDetector(
           onTap: () {
             Navigator.pushNamed(context, "/routeTekliBatak");
           },
-          child: Column(children: <Widget>[
+          child: Column(children: const <Widget>[
             GameCard("Tekli Batak"),
             GameCard("Eşli Batak"),
             GameCard("Gömmeli Batak"),

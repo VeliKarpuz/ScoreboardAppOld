@@ -1,17 +1,15 @@
-// ignore_for_file: prefer_const_constructors,prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
 class PlayerName extends StatelessWidget {
   final String name;
-  PlayerName(this.name);
+  const PlayerName(this.name, {super.key});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        margin: EdgeInsets.all(3),
-        decoration: BoxDecoration(
+        margin: const EdgeInsets.all(3),
+        decoration: const BoxDecoration(
           border: Border(
             bottom: BorderSide(width: 2),
           ),
